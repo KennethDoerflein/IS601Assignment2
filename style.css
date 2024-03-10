@@ -1,0 +1,27 @@
+#q3Tip {
+  width: 40px;
+}
+#q3Total {
+  width: 100px;
+}
+input {
+  padding: 5px;
+  border-radius: 10px;
+  margin: 5px;
+}
+input:hover {
+  background-color: lightgray;
+}
+body {
+  margin: calc(100% - 98%);
+}
+h1 {
+  margin-bottom: 5px;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+}
+.result {
+  font-size: large;
+  font-weight: bolder;
+  margin-top: 15px;
+}
