@@ -67,15 +67,22 @@ function tipCalculate() {
   if (tipPercentage < 0 || subtotal < 0) {
     document.getElementById("q3Result").style.color = "red";
     document.getElementById("q3Result").innerText = "Numbers must be positive";
+    document.getElementById("q3Subtotal").innerText = "";
+    document.getElementById("q3CalcTip").innerText = "";
     return;
   } else if (tipPercentage < 1 && tipPercentage > 0) {
     document.getElementById("q3Result").style.color = "red";
     document.getElementById("q3Result").innerText = "Enter tip as a percentage not a decimal Ex: 20%";
+    document.getElementById("q3Subtotal").innerText = "";
+    document.getElementById("q3CalcTip").innerText = "";
     return;
   }
   const usdOptions = { style: "currency", currency: "USD" };
   const currencyFormatter = new Intl.NumberFormat("en-US", usdOptions);
-  let total = subtotal + subtotal * (tipPercentage / 100);
+  let tip = subtotal * (tipPercentage / 100);
+  let total = subtotal + tip;
   document.getElementById("q3Result").style.color = "black";
+  document.getElementById("q3Subtotal").innerText = "Subtotal: " + currencyFormatter.format(subtotal);
+  document.getElementById("q3CalcTip").innerText = "Tip: " + currencyFormatter.format(tip);
   document.getElementById("q3Result").innerText = "Total: " + currencyFormatter.format(total);
 }
