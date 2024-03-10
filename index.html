@@ -9,22 +9,22 @@
   <body>
     <h1>Question 1: Vowel and Consonant Counter</h1>
     <span>Enter a string: </span>
-    <input autofocus type="text" name="q1" id="q1" onkeyup="vowelCount()" />
+    <input autofocus type="text" name="q1" id="q1" />
     <div class="result" id="q1Result"></div>
 
     <h1>Question 2: Palindrome</h1>
     <span>Enter a number: </span>
-    <input type="number" name="q2" id="q2" onkeyup="isPalindrome()" />
+    <input type="number" name="q2" id="q2" min="0" />
     <div class="result" id="q2Result"></div>
 
     <h1>Question 3: Total with Tip</h1>
     <div>
       <span>Enter the bill subtotal: </span>
-      $<input type="number" name="q3Total" id="q3Total" onkeyup="tipCalculate()" />
+      $<input type="number" name="q3Total" id="q3Total" min="0" />
     </div>
     <div>
       <span>Enter a tip percentage: </span>
-      <input type="number" name="q3Tip" id="q3Tip" onkeyup="tipCalculate()" max="999" />%
+      <input type="number" name="q3Tip" id="q3Tip" max="999" min="0" />%
     </div>
     <div class="result" id="q3Result"></div>
 

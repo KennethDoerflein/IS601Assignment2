@@ -1,5 +1,5 @@
 #q3Tip {
-  width: 40px;
+  width: 50px;
 }
 #q3Total {
   width: 100px;
@@ -24,7 +24,7 @@ h1 {
   text-decoration-thickness: 2px;
 }
 .result {
-  font-size: large;
+  font-size: x-large;
   font-weight: bolder;
   margin-top: 15px;
 }
