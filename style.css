@@ -9,9 +9,13 @@ input {
   border-radius: 10px;
   margin: 5px;
   font-size: 18px;
+  font-weight: bold;
 }
 input:hover {
-  background-color: lightgray;
+  background-color: #e4dddd;
+}
+input:focus {
+  background-color: #e4dddd;
 }
 body {
   margin: calc(100% - 98%);
