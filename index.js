@@ -17,7 +17,7 @@ function vowelCount() {
 
   if (length === 0) {
     document.getElementById("q1Result").style.color = "red";
-    document.getElementById("q1Result").innerText = "Missing input";
+    document.getElementById("q1Result").innerText = "Missing/Invalid input";
     return;
   }
 
@@ -36,7 +36,7 @@ function isPalindrome() {
 
   if (length === 0) {
     document.getElementById("q2Result").style.color = "red";
-    document.getElementById("q2Result").innerText = "Missing input";
+    document.getElementById("q2Result").innerText = "Missing/Invalid input";
     return;
   } else if (number.indexOf("-") !== -1) {
     document.getElementById("q2Result").style.color = "red";
@@ -58,7 +58,7 @@ function tipCalculate() {
   let tipPercentage = document.getElementById("q3Tip").value;
   if (subtotal === "" || tipPercentage === "") {
     document.getElementById("q3Result").style.color = "red";
-    document.getElementById("q3Result").innerText = "Missing input";
+    document.getElementById("q3Result").innerText = "Missing/Invalid input";
     return;
   }
   subtotal = Number(subtotal);
