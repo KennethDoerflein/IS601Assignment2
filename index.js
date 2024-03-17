@@ -13,6 +13,7 @@ function vowelCount() {
   let word = document.getElementById("q1").value;
   let length = word.length;
   let vowelCount = 0;
+  let consonantCount = 0;
   let vowels = ["a", "e", "i", "o", "u"];
 
   if (length === 0) {
@@ -25,9 +26,13 @@ function vowelCount() {
     if (vowels.indexOf(word.charAt(i).toLowerCase()) !== -1) {
       vowelCount++;
     }
+    if (word.charAt(i) === " ") {
+      consonantCount--;
+    }
   }
+  consonantCount += length - vowelCount;
   document.getElementById("q1Result").style.color = "black";
-  document.getElementById("q1Result").innerText = vowelCount + " vowels and " + (length - vowelCount) + ' consonants in "' + word + '"';
+  document.getElementById("q1Result").innerText = vowelCount + " vowels and " + consonantCount + ' consonants in "' + word + '"';
 }
 
 function isPalindrome() {
