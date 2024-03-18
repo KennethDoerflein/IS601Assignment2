@@ -15,6 +15,7 @@ function vowelCount() {
   let vowelCount = 0;
   let consonantCount = 0;
   let vowels = ["a", "e", "i", "o", "u"];
+  let consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
 
   if (length === 0) {
     document.getElementById("q1Result").style.color = "red";
@@ -26,11 +27,10 @@ function vowelCount() {
     if (vowels.indexOf(word.charAt(i).toLowerCase()) !== -1) {
       vowelCount++;
     }
-    if (word.charAt(i) === " ") {
-      consonantCount--;
+    if (consonants.indexOf(word.charAt(i).toLowerCase()) !== -1) {
+      consonantCount++;
     }
   }
-  consonantCount += length - vowelCount;
   document.getElementById("q1Result").style.color = "black";
   document.getElementById("q1Result").innerText = vowelCount + " vowels and " + consonantCount + ' consonants in "' + word + '"';
 }
